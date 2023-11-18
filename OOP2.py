@@ -24,3 +24,14 @@ class ExtTriangle(Triangle):
         if any(side <= 0 for side in (self.a, self.b, self.c)):
             return "З негативними числами нічого не вийде!"
         return super().is_triagle()
+
+triangle1 = ExtTriangle(3, 4, 5)
+triangle2 = ExtTriangle(3, -4, 5)
+# triangle2 = ExtTriangle(a:-1, b:2, c:2)
+triangle3 = ExtTriangle(1, 1, 1)
+triangle4 = ExtTriangle(5, 12, 13)
+
+print(triangle1.is_triangle())
+print(triangle2.is_triangle())
+print(triangle3.is_triangle())
+print(triangle4.is_triangle())
